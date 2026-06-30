@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eMigranteFiscal · Cambia de país, cambia de fiscalidad</title>
+<meta name="description" content="Te acompañamos a mudar tu residencia y tu fiscalidad a uno de más de 16 países que encajen con la vida que quieres, sin papeleo imposible y dentro de la ley. Reserva una revisión gratuita de 15 minutos.">
+<meta name="theme-color" content="#102B22">
+<link rel="canonical" href="https://emigrantefiscal.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="eMigranteFiscal">
+<meta property="og:title" content="eMigranteFiscal · Vive donde quieras, tributa donde tiene sentido">
+<meta property="og:description" content="Acompañamiento real en tu emigración fiscal a más de 16 países. Coordinamos contables, abogados y notarios locales. Primera llamada gratis y sin compromiso.">
+<meta property="og:url" content="https://emigrantefiscal.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="eMigranteFiscal · Vive donde quieras, tributa donde tiene sentido">
+<meta name="twitter:description" content="Acompañamiento real en tu emigración fiscal a más de 16 países. Primera llamada gratis y sin compromiso.">
+
+<!-- Favicon embebido: sello de pasaporte (tinta verde, anillo de oro) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23102B22'/%3E%3Ccircle cx='16' cy='16' r='9.2' fill='none' stroke='%23C2A24E' stroke-width='1.3'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23C2A24E' stroke-width='.8' stroke-dasharray='1.6 1.8'/%3E%3Ctext x='16' y='19.4' font-family='monospace' font-size='8' fill='%23E9E2D0' text-anchor='middle'%3EeF%3C/text%3E%3C/svg%3E">
+
+<!-- Tipografías: Newsreader (display editorial), Hanken Grotesk (texto), IBM Plex Mono (datos / zona de lectura) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "eMigranteFiscal",
+  "description": "Acompañamiento en emigración fiscal. Coordinamos una red de profesionales locales (contables, abogados, notarios, inmobiliarios y traductores) en más de 16 países para ayudarte a trasladar tu residencia y tu fiscalidad de forma legal.",
+  "url": "https://emigrantefiscal.com/",
+  "email": "SOS@eMigranteFiscal.com",
+  "areaServed": "Worldwide",
+  "knowsLanguage": ["es", "en"],
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Revisión gratuita de 15 minutos",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   eMigranteFiscal · hoja de estilo v2
+   Concepto: documento de viaje premium.
+   Tinta verde pino, marfil de papel, un hilo de oro de imprenta.
+   Firma: grabado guilloché + banda de lectura mecánica (MRZ).
+   ============================================================ */
+
+:root{
+  /* ---- Color ---- */
+  --paper:    #F3EFE4;   /* marfil de papel, ligeramente frío */
+  --paper-2:  #ECE5D5;   /* panel y talón en relieve */
+  --paper-3:  #E2DAC6;   /* hueco impreso */
+  --line:     rgba(18,43,34,.14);
+  --line-2:   rgba(18,43,34,.08);
+  --ink:      #16241D;   /* tinta verde-carbón, casi negra */
+  --ink-2:    #4E5C55;   /* secundario */
+  --ink-3:    #8A958E;   /* terciario / pies */
+  --green:    #1C5C49;   /* acento único: verde pino */
+  --green-d:  #144230;   /* hover */
+  --green-dk: #0F2A21;   /* fondo de secciones oscuras */
+  --green-dk2:#0B2019;
+  --gold:     #9C7C36;   /* oro de imprenta, solo filo */
+  --gold-2:   #C7A858;   /* oro claro sobre fondo oscuro */
+  --paper-dim:#C9D2C6;   /* texto tenue sobre verde oscuro */
+
+  /* ---- Tipografía ---- */
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body:    "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- Layout ---- */
+  --wrap: 1180px;
+  --gutter: clamp(20px, 5vw, 56px);
+  --radius: 4px;
+  --radius-lg: 8px;
+  --nav-h: 70px;
+
+  /* banda MRZ como textura (tics regulares) */
+  --mrz-ticks: repeating-linear-gradient(90deg,
+      currentColor 0, currentColor 1.5px,
+      transparent 1.5px, transparent 7px);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--nav-h) + 16px);
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(16px, 1.04vw, 17.5px);
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font-family:inherit; }
+::selection{ background:var(--green); color:var(--paper); }
+:focus-visible{ outline:2.5px solid var(--green); outline-offset:3px; border-radius:3px; }
+
+/* ---- Display ---- */
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:500;
+  line-height:1.06;
+  letter-spacing:-.012em;
+  margin:0;
+  font-variation-settings:"opsz" 40;
+}
+h1{ font-size:clamp(2.7rem, 6.2vw, 5.1rem); line-height:.99; letter-spacing:-.026em; font-weight:500; font-variation-settings:"opsz" 72; }
+h2{ font-size:clamp(2.05rem, 4.1vw, 3.3rem); letter-spacing:-.018em; font-variation-settings:"opsz" 60; }
+h3{ font-size:clamp(1.22rem, 1.9vw, 1.55rem); letter-spacing:-.01em; }
+.it{ font-style:italic; }
+.gold-text{ color:var(--gold); }
+
+p{ margin:0 0 1.05em; }
+p:last-child{ margin-bottom:0; }
+
+/* ---- Estructura ---- */
+.wrap{ width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter); }
+
+.section{ padding:clamp(64px,9vw,118px) 0; position:relative; }
+.section--tint{ background:var(--paper-2); }
+
+.section-head{ max-width:62ch; margin-bottom:clamp(2.6rem,5vw,4rem); }
+.lead{ color:var(--ink-2); font-size:clamp(1.05rem,1.5vw,1.2rem); margin-top:1.1rem; max-width:60ch; }
+
+/* ---- Eyebrow: etiqueta de registro ---- */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:.6em;
+  font-family:var(--mono); font-size:.72rem; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase;
+  color:var(--green);
+}
+.eyebrow::before{
+  content:""; width:24px; height:1px; background:var(--green); opacity:.55;
+}
+
+/* ---- Botones ---- */
+.btn{
+  --bg:var(--green); --fg:var(--paper);
+  display:inline-flex; align-items:center; gap:.6em;
+  background:var(--bg); color:var(--fg);
+  font-family:var(--body); font-weight:600; font-size:.96rem;
+  letter-spacing:.005em;
+  padding:.85em 1.35em; border-radius:var(--radius);
+  border:1px solid transparent; cursor:pointer;
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+  box-shadow:0 1px 0 rgba(18,43,34,.18);
+}
+.btn:hover{ background:var(--green-d); transform:translateY(-1px); box-shadow:0 6px 18px -8px rgba(15,42,33,.55); }
+.btn:active{ transform:translateY(0); }
+.btn .arrow{ transition:transform .2s ease; }
+.btn:hover .arrow{ transform:translateX(3px); }
+.btn--lg{ padding:1.02em 1.6em; font-size:1.02rem; }
+.btn--ink{ --bg:transparent; --fg:var(--ink); border-color:var(--line); box-shadow:none; }
+.btn--ink:hover{ --bg:var(--ink); --fg:var(--paper); transform:none; }
+.btn--primary{ --bg:var(--green); --fg:var(--paper); }
+
+/* enlace con flecha */
+.link-arrow{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-family:var(--mono); font-size:.82rem; font-weight:500;
+  letter-spacing:.02em; color:var(--green);
+  border-bottom:1px solid transparent; padding-bottom:1px;
+  transition:border-color .18s ease, gap .18s ease;
+}
+.link-arrow:hover{ border-color:var(--green); gap:.7em; }
+
+/* hairline decorativa estilo grabado */
+.rule-mrz{
+  height:10px; color:var(--line);
+  background:var(--mrz-ticks); opacity:.5;
+}
+
+.skip{
+  position:absolute; left:-999px; top:0; z-index:200;
+  background:var(--ink); color:var(--paper);
+  padding:.7em 1.1em; border-radius:0 0 var(--radius) 0;
+  font-family:var(--mono); font-size:.85rem;
+}
+.skip:focus{ left:0; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:100; height:var(--nav-h);
+  display:flex; align-items:center;
+  background:color-mix(in srgb, var(--paper) 86%, transparent);
+  -webkit-backdrop-filter:saturate(1.1) blur(10px);
+  backdrop-filter:saturate(1.1) blur(10px);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease, background .25s ease;
+}
+.nav.is-scrolled{ border-bottom-color:var(--line); }
+.nav .wrap{ display:flex; align-items:center; justify-content:space-between; gap:1.2rem; }
+
+.brand{ display:inline-flex; align-items:center; gap:.6em; font-weight:600; letter-spacing:-.01em; }
+.brand .mark{
+  display:grid; place-items:center; width:30px; height:30px; flex:none;
+  border-radius:50%; background:var(--green-dk);
+  color:var(--paper); font-family:var(--mono); font-size:.7rem; font-weight:600;
+  border:1px solid var(--gold); box-shadow:inset 0 0 0 2px rgba(199,168,88,.15);
+  letter-spacing:.02em;
+}
+.brand .m{ color:var(--green); }
+
+.nav-links{ display:flex; gap:1.7rem; list-style:none; margin:0; padding:0; }
+.nav-links a{
+  font-size:.92rem; color:var(--ink-2); font-weight:500;
+  padding:.3em 0; position:relative; transition:color .18s ease;
+}
+.nav-links a::after{
+  content:""; position:absolute; left:0; bottom:-2px; width:0; height:1.5px;
+  background:var(--green); transition:width .2s ease;
+}
+.nav-links a:hover{ color:var(--ink); }
+.nav-links a:hover::after{ width:100%; }
+
+.nav-actions{ display:flex; align-items:center; gap:.8rem; }
+.nav-toggle{
+  display:none; width:42px; height:38px; border:1px solid var(--line);
+  background:transparent; border-radius:var(--radius); cursor:pointer;
+  padding:0; place-items:center;
+}
+.nav-toggle span{ display:block; width:18px; height:1.6px; background:var(--ink); margin:2.2px auto; transition:.22s; }
+.nav.is-open .nav-toggle span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+.nav.is-open .nav-toggle span:nth-child(2){ opacity:0; }
+.nav.is-open .nav-toggle span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+/* ============================================================
+   HERO · pagina de datos del pasaporte
+   ============================================================ */
+.hero{
+  position:relative; overflow:hidden;
+  padding:calc(var(--nav-h) + clamp(48px,8vw,92px)) 0 clamp(54px,8vw,96px);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(28,92,73,.06), transparent 55%),
+    var(--paper);
+}
+.hero-bg{ position:absolute; inset:0; pointer-events:none; z-index:0; overflow:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20620%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cg%20fill%3D%27none%27%3E%3Cg%20stroke%3D%27%2316241D%27%20stroke-width%3D%271%27%20opacity%3D%270.05%27%3E%3Cline%20x1%3D%27240%27%20y1%3D%270%27%20x2%3D%27240%27%20y2%3D%27620%27%2F%3E%3Cline%20x1%3D%27560%27%20y1%3D%270%27%20x2%3D%27560%27%20y2%3D%27620%27%2F%3E%3Cline%20x1%3D%27860%27%20y1%3D%270%27%20x2%3D%27860%27%20y2%3D%27620%27%2F%3E%3Cline%20x1%3D%271080%27%20y1%3D%270%27%20x2%3D%271080%27%20y2%3D%27620%27%2F%3E%3Cline%20x1%3D%270%27%20y1%3D%27210%27%20x2%3D%271200%27%20y2%3D%27210%27%2F%3E%3Cline%20x1%3D%270%27%20y1%3D%27420%27%20x2%3D%271200%27%20y2%3D%27420%27%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%27%231C5C49%27%20stroke-width%3D%271%27%20opacity%3D%270.16%27%3E%3Cpath%20d%3D%27M-40%20150%20C%20260%2080%2C%20540%20220%2C%20820%20140%20S%201320%2080%2C%201260%20200%27%2F%3E%3Cpath%20d%3D%27M-40%20360%20C%20300%20300%2C%20560%20440%2C%20900%20350%20S%201320%20300%2C%201260%20420%27%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%27%239C7C36%27%20opacity%3D%270.5%27%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27210%27%20r%3D%273%27%2F%3E%3Ccircle%20cx%3D%27860%27%20cy%3D%27140%27%20r%3D%273%27%2F%3E%3Ccircle%20cx%3D%27560%27%20cy%3D%27420%27%20r%3D%273%27%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%27M240%20210%20Q%20560%2080%20860%20140%27%20stroke%3D%27%239C7C36%27%20stroke-width%3D%271.2%27%20stroke-dasharray%3D%272%207%27%20opacity%3D%270.55%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size:cover; background-position:center; }
+
+.hero .wrap{ position:relative; z-index:1; }
+.hero-grid{
+  display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(2.2rem,5vw,4.4rem);
+  align-items:center;
+}
+.hero-grid > *{ min-width:0; }
+.hero-copy .eyebrow{ margin-bottom:1.4rem; }
+.hero h1{ margin:0 0 1.3rem; }
+.hero h1 .line2{ display:block; color:var(--green); font-style:italic; font-weight:400; }
+.hero-sub{ color:var(--ink-2); font-size:clamp(1.08rem,1.6vw,1.28rem); max-width:40ch; }
+.hero-cta-row{ display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; margin-top:2rem; }
+.hero-note{ font-family:var(--mono); font-size:.78rem; letter-spacing:.04em; color:var(--ink-3); }
+
+/* ---- la "página de datos" ---- */
+.datapage{
+  position:relative; background:var(--paper-2); min-width:0;
+  border:1px solid var(--line); border-radius:var(--radius-lg);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.6) inset,
+    0 30px 60px -34px rgba(15,42,33,.5),
+    0 2px 8px -4px rgba(15,42,33,.25);
+  overflow:hidden;
+}
+.datapage::before{ /* filo de oro interior */
+  content:""; position:absolute; inset:7px; border:1px solid rgba(156,124,54,.4);
+  border-radius:5px; pointer-events:none;
+}
+.dp-guilloche{ position:absolute; inset:0; opacity:.5; pointer-events:none; overflow:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20360%20320%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%231C5C49%27%20stroke-width%3D%270.6%27%20opacity%3D%270.18%27%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%280%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%2830%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%2860%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%2890%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%28120%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27150%27%20ry%3D%2760%27%20transform%3D%27rotate%28150%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27110%27%20ry%3D%2742%27%20transform%3D%27rotate%2815%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27110%27%20ry%3D%2742%27%20transform%3D%27rotate%2875%20180%20160%29%27%2F%3E%3Cellipse%20cx%3D%27180%27%20cy%3D%27160%27%20rx%3D%27110%27%20ry%3D%2742%27%20transform%3D%27rotate%28135%20180%20160%29%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size:cover; background-position:center; }
+
+.dp-head{
+  position:relative; display:flex; align-items:flex-start; justify-content:space-between;
+  gap:1rem; padding:1.5rem 1.6rem 0;
+}
+.dp-kicker{ font-family:var(--mono); font-size:.66rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); }
+.dp-type{ font-family:var(--mono); font-size:.66rem; letter-spacing:.24em; color:var(--green); }
+.dp-seal{
+  position:relative; width:62px; height:62px; flex:none; display:grid; place-items:center;
+  border-radius:50%; border:1.5px solid var(--gold); color:var(--green);
+  transform:rotate(-9deg);
+}
+.dp-seal::after{ content:""; position:absolute; inset:5px; border-radius:50%; border:1px dashed rgba(156,124,54,.6); }
+.dp-seal b{ font-family:var(--display); font-style:italic; font-size:1.3rem; line-height:1; }
+
+.dp-portrait{
+  position:relative; margin:1.1rem 1.6rem 0; padding:1.1rem 0 1.3rem;
+  display:grid; grid-template-columns:84px 1fr; gap:1.2rem; align-items:center;
+  border-top:1px solid var(--line-2);
+}
+.dp-photo{
+  width:84px; height:104px; border-radius:3px; flex:none;
+  background:
+    repeating-linear-gradient(135deg, rgba(18,43,34,.05) 0 6px, transparent 6px 12px),
+    var(--paper-3);
+  border:1px solid var(--line); position:relative; overflow:hidden;
+}
+.dp-photo::after{ /* silueta tipo retrato */
+  content:""; position:absolute; left:50%; bottom:-18px; width:48px; height:48px;
+  transform:translateX(-50%); border-radius:50%;
+  background:rgba(18,43,34,.16);
+  box-shadow:0 26px 0 -2px rgba(18,43,34,.16);
+}
+.dp-rows{ display:grid; gap:.55rem; }
+.dp-row{ display:grid; grid-template-columns:auto 1fr; gap:.8rem; align-items:baseline; }
+.dp-row dt{ font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-3); }
+.dp-row dd{ margin:0; font-weight:600; font-size:.94rem; color:var(--ink); }
+.dp-row dd.em{ color:var(--green); }
+
+.dp-mrz{
+  margin-top:1.2rem; padding:.7rem 1.6rem .85rem; background:var(--paper-3);
+  border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:clamp(.62rem,1.1vw,.76rem); font-weight:500;
+  letter-spacing:.12em; color:var(--ink-2); line-height:1.55;
+  white-space:nowrap; overflow:hidden;
+}
+.dp-mrz > span{ display:block; white-space:nowrap; overflow:hidden; text-overflow:clip; }
+.dp-mrz .chev{ display:inline; color:var(--ink-3); }
+
+/* ---- franja de confianza ---- */
+.trust-strip{
+  display:flex; align-items:center; flex-wrap:wrap; gap:.7rem 1.1rem;
+  margin-top:clamp(2.4rem,5vw,3.4rem); padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:.78rem; letter-spacing:.04em; color:var(--ink-2);
+}
+.trust-strip .dot{ width:4px; height:4px; border-radius:50%; background:var(--gold); }
+
+/* ============================================================
+   PROBLEMA  (fondo verde oscuro)
+   ============================================================ */
+.problem{ background:var(--green-dk); color:var(--paper); }
+.problem::before{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cg fill='none' stroke='%23C7A858' stroke-width='.5' opacity='.18'%3E%3Cpath d='M-20 40 Q40 0 100 40 T220 40'/%3E%3Cpath d='M-20 80 Q40 40 100 80 T220 80'/%3E%3Cpath d='M-20 120 Q40 80 100 120 T220 120'/%3E%3C/g%3E%3C/svg%3E");
+}
+.problem .wrap{ position:relative; z-index:1; }
+.problem .eyebrow{ color:var(--gold-2); }
+.problem .eyebrow::before{ background:var(--gold-2); }
+.problem h2{ color:var(--paper); }
+.problem p{ color:var(--paper-dim); }
+.problem strong{ color:var(--paper); font-weight:600; }
+.problem-grid{ display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:start; }
+.problem-grid p{ font-size:clamp(1.05rem,1.5vw,1.2rem); }
+
+/* ============================================================
+   CÓMO FUNCIONA
+   ============================================================ */
+.steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(1rem,2.2vw,1.6rem); }
+.step{
+  position:relative; padding:1.7rem 1.5rem; background:var(--paper-2);
+  border:1px solid var(--line); border-radius:var(--radius-lg);
+}
+.step .num{
+  display:block; font-family:var(--mono); font-size:.68rem; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--green); margin-bottom:1rem;
+}
+.step h3{ margin-bottom:.5rem; }
+.step p{ color:var(--ink-2); font-size:.94rem; }
+.step::after{
+  content:counter(s); counter-increment:s;
+  position:absolute; right:1.2rem; top:1rem;
+  font-family:var(--display); font-style:italic; font-size:2.4rem; line-height:1;
+  color:var(--line); pointer-events:none;
+}
+.steps{ counter-reset:s; }
+
+/* ============================================================
+   PAISES · fichas tipo pagina de visado
+   ============================================================ */
+.filters{ display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom:2.4rem; }
+.chip{
+  font-family:var(--mono); font-size:.78rem; letter-spacing:.02em;
+  padding:.55em 1em; border-radius:var(--radius); cursor:pointer;
+  background:transparent; color:var(--ink-2); border:1px solid var(--line);
+  transition:.18s;
+}
+.chip:hover{ border-color:var(--green); color:var(--ink); }
+.chip.is-active{ background:var(--green); color:var(--paper); border-color:var(--green); }
+
+.countries{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.pass{
+  position:relative; display:flex; flex-direction:column; overflow:hidden;
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
+  box-shadow:0 1px 2px rgba(15,42,33,.04);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.pass:hover{ transform:translateY(-3px); border-color:rgba(28,92,73,.4); box-shadow:0 24px 40px -28px rgba(15,42,33,.5); }
+.pass.is-hidden{ display:none; }
+
+.pass-stub{
+  position:relative; padding:1.15rem 1.25rem 1.05rem;
+  background:linear-gradient(180deg, var(--tint,#e7e0cf), color-mix(in srgb, var(--tint,#e7e0cf) 55%, var(--paper-2)));
+  border-bottom:1px dashed var(--line);
+}
+.pass-stub::after{ /* mini banda de lectura bajo el talón */
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:6px;
+  color:rgba(18,43,34,.28); background:var(--mrz-ticks);
+}
+.pass-code{
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; color:var(--ink-2);
+  text-transform:uppercase;
+}
+.pass-name{ font-family:var(--display); font-size:1.5rem; font-weight:500; letter-spacing:-.015em; margin:.35rem 0 .2rem; }
+.pass-coords{ font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; color:var(--ink-3); }
+.pass-mark{
+  position:absolute; right:1.1rem; top:1.05rem; width:50px; height:50px;
+  display:grid; place-items:center; border-radius:50%;
+  border:1.4px solid var(--green); color:var(--green);
+  font-family:var(--mono); font-weight:600; font-size:.74rem; letter-spacing:.02em;
+  transform:rotate(-8deg); background:color-mix(in srgb, var(--paper) 65%, transparent);
+  transition:transform .22s ease;
+}
+.pass-mark::after{ content:""; position:absolute; inset:4px; border-radius:50%; border:1px dashed rgba(28,92,73,.45); }
+.pass:hover .pass-mark{ transform:rotate(2deg) scale(1.05); }
+
+.pass-body{ display:flex; flex-direction:column; flex:1; padding:1.2rem 1.25rem 1.3rem; }
+.pass-hook{ font-size:.95rem; color:var(--ink); margin-bottom:1.1rem; }
+.pass-specs{ margin:0 0 1.2rem; display:grid; gap:0; }
+.pass-specs .spec{
+  display:grid; grid-template-columns:7.2rem 1fr; gap:.7rem; align-items:baseline;
+  padding:.5rem 0; border-top:1px solid var(--line-2);
+}
+.pass-specs .spec:first-child{ border-top:none; }
+.pass-specs dt{ font-family:var(--mono); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); }
+.pass-specs dd{ margin:0; font-size:.86rem; color:var(--ink-2); }
+.pass-foot{ margin-top:auto; }
+
+#noResults{ font-family:var(--mono); }
+
+/* ============================================================
+   SERVICIOS
+   ============================================================ */
+.svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.svc{
+  position:relative; padding:1.7rem 1.5rem; background:var(--paper-2);
+  border:1px solid var(--line); border-radius:var(--radius-lg);
+  display:flex; flex-direction:column;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.svc:hover{ transform:translateY(-2px); border-color:rgba(28,92,73,.35); box-shadow:0 20px 34px -26px rgba(15,42,33,.5); }
+.svc .tag{
+  align-self:flex-start; font-family:var(--mono); font-size:.62rem; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--green);
+  padding:.32em .7em; border:1px solid rgba(28,92,73,.3); border-radius:999px;
+  margin-bottom:1.05rem;
+}
+.svc h3{ margin-bottom:.55rem; }
+.svc p{ color:var(--ink-2); font-size:.92rem; margin-bottom:1.2rem; }
+.svc .link-arrow{ margin-top:auto; }
+
+/* ============================================================
+   CONFIANZA
+   ============================================================ */
+.stats{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem;
+  padding:2rem 0 2.6rem; margin-bottom:1rem;
+  border-block:1px solid var(--line);
+}
+.stat{ text-align:center; }
+.stat .big{ font-family:var(--display); font-weight:500; font-size:clamp(2.6rem,5vw,3.8rem); line-height:1; color:var(--green); letter-spacing:-.02em; }
+.stat .lbl{ font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin-top:.7rem; }
+.ph{ color:var(--gold); border-bottom:1.5px dotted var(--gold); }
+
+.subhead{ font-size:clamp(1.4rem,2.4vw,1.9rem); margin:2.8rem 0 1.6rem; }
+
+.quotes{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.quote{
+  position:relative; padding:2.2rem 1.5rem 1.5rem; background:var(--paper);
+  border:1px solid var(--line); border-radius:var(--radius-lg);
+}
+.quote .qmark{ position:absolute; left:1.1rem; top:.4rem; font-family:var(--display); font-style:italic; font-size:3.2rem; color:var(--gold); opacity:.55; line-height:1; }
+.quote p{ font-family:var(--display); font-size:1.06rem; line-height:1.45; color:var(--ink); margin-bottom:1.2rem; }
+.quote .who b{ font-family:var(--body); font-weight:600; font-size:.9rem; }
+.quote .who span{ font-family:var(--mono); font-size:.74rem; color:var(--ink-3); }
+
+.network{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem 1.3rem; }
+.pro{ display:flex; align-items:center; gap:.9rem; padding:.9rem 1rem; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg); }
+.pro .ava{
+  width:44px; height:44px; flex:none; display:grid; place-items:center; border-radius:50%;
+  background:var(--green-dk); color:var(--paper); border:1px solid var(--gold);
+  font-family:var(--mono); font-size:.78rem; font-weight:600; letter-spacing:.04em;
+}
+.pro .meta{ display:flex; flex-direction:column; line-height:1.3; }
+.pro .meta b{ font-weight:600; font-size:.92rem; }
+.pro .meta span{ font-size:.82rem; color:var(--ink-2); }
+.pro .meta .co{ font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; color:var(--ink-3); }
+
+/* ============================================================
+   CRIPTO  (fondo verde oscuro)
+   ============================================================ */
+.crypto{ background:var(--green-dk); color:var(--paper); }
+.crypto::before{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.45;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg fill='none' stroke='%23C7A858' stroke-width='.5' opacity='.16'%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='62'/%3E%3Ccircle cx='100' cy='100' r='84'/%3E%3C/g%3E%3C/svg%3E");
+}
+.crypto .wrap{ position:relative; z-index:1; }
+.crypto .eyebrow{ color:var(--gold-2); }
+.crypto .eyebrow::before{ background:var(--gold-2); }
+.crypto h2{ color:var(--paper); }
+.crypto .lead{ color:var(--paper-dim); }
+.crypto-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.cry{
+  display:flex; flex-direction:column; padding:1.7rem 1.5rem;
+  background:rgba(255,255,255,.035); border:1px solid rgba(199,168,88,.25);
+  border-radius:var(--radius-lg);
+  transition:transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.cry:hover{ transform:translateY(-3px); background:rgba(255,255,255,.06); border-color:rgba(199,168,88,.55); }
+.cry .ix{ font-family:var(--mono); font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-2); margin-bottom:1.1rem; }
+.cry h3{ color:var(--paper); margin-bottom:.5rem; }
+.cry p{ color:var(--paper-dim); font-size:.92rem; margin-bottom:1.3rem; }
+.cry .go{ margin-top:auto; font-family:var(--mono); font-size:.8rem; letter-spacing:.02em; color:var(--gold-2); display:inline-flex; gap:.4em; }
+.cry:hover .go{ color:#e7d49a; }
+
+/* ============================================================
+   CTA FINAL + FORM
+   ============================================================ */
+.cta-final{ background:var(--paper-2); }
+.cta-final .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:start; }
+.cta-points{ list-style:none; margin:2rem 0 0; padding:0; display:grid; gap:.85rem; }
+.cta-points li{ display:flex; gap:.7rem; align-items:flex-start; color:var(--ink-2); font-size:.98rem; }
+.cta-points .ck{
+  width:22px; height:22px; flex:none; display:grid; place-items:center; border-radius:50%;
+  background:rgba(28,92,73,.12); color:var(--green); font-size:.72rem; font-weight:700; margin-top:.1rem;
+}
+
+.form-card{
+  background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
+  padding:clamp(1.5rem,3vw,2.2rem); position:relative;
+  box-shadow:0 30px 60px -40px rgba(15,42,33,.5);
+}
+.form-card::before{ content:""; position:absolute; inset:6px; border:1px solid rgba(156,124,54,.28); border-radius:5px; pointer-events:none; }
+.field{ position:relative; margin-bottom:1.05rem; }
+.field label{ display:block; font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); margin-bottom:.45rem; }
+.field .opt{ color:var(--ink-3); text-transform:none; letter-spacing:0; }
+.field input, .field select, .field textarea{
+  width:100%; font-family:var(--body); font-size:.96rem; color:var(--ink);
+  background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius);
+  padding:.72em .85em; transition:border-color .18s ease, box-shadow .18s ease;
+}
+.field textarea{ min-height:92px; resize:vertical; }
+.field input::placeholder, .field textarea::placeholder{ color:var(--ink-3); }
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(28,92,73,.14);
+}
+.field select{ appearance:none; -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%234E5C55' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right .9em center; padding-right:2.3em;
+}
+.form-card .btn{ width:100%; justify-content:center; margin-top:.4rem; }
+.form-foot{ font-family:var(--mono); font-size:.72rem; color:var(--ink-3); margin-top:1rem; text-align:center; letter-spacing:.02em; }
+
+.form-ok{ display:none; text-align:center; padding:1.5rem .5rem; }
+.form-ok.show{ display:block; }
+.form-ok .tick{ width:54px; height:54px; margin:0 auto 1rem; display:grid; place-items:center; border-radius:50%; background:var(--green); color:var(--paper); font-size:1.4rem; }
+.form-ok h3{ margin-bottom:.5rem; }
+.form-ok p{ color:var(--ink-2); }
+
+/* ============================================================
+   LUNA / MARTE
+   ============================================================ */
+.space-egg{ background:var(--green-dk2); color:var(--paper); overflow:hidden; }
+.space-card{ position:relative; display:grid; grid-template-columns:1.3fr .7fr; gap:2rem; align-items:center; }
+.space-egg .eyebrow{ color:var(--gold-2); }
+.space-egg .eyebrow::before{ background:var(--gold-2); }
+.space-egg h2{ color:var(--paper); margin:1.1rem 0; }
+.space-egg p{ color:var(--paper-dim); max-width:52ch; }
+.space-orbit{
+  position:relative; height:180px;
+  background:
+    radial-gradient(circle at 70% 50%, var(--gold-2) 0 4px, transparent 5px),
+    radial-gradient(circle at 70% 50%, transparent 56px, rgba(199,168,88,.35) 56px 57px, transparent 58px),
+    radial-gradient(circle at 70% 50%, transparent 92px, rgba(199,168,88,.18) 92px 93px, transparent 94px);
+}
+.space-orbit::after{ content:""; position:absolute; left:calc(70% - 96px); top:calc(50% - 4px); width:8px; height:8px; border-radius:50%; background:var(--paper); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{ background:var(--green-dk2); color:var(--paper-dim); padding:clamp(3rem,6vw,4.6rem) 0 2.4rem; }
+.foot-top{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2rem; }
+.foot .brand{ color:var(--paper); }
+.foot .brand .m{ color:var(--gold-2); }
+.foot-tag{ font-size:.92rem; margin:1.1rem 0; max-width:34ch; }
+.foot-mail{ font-family:var(--mono); font-size:.86rem; color:var(--gold-2); border-bottom:1px solid transparent; }
+.foot-mail:hover{ border-color:var(--gold-2); }
+.foot-col h4{ font-family:var(--mono); font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--paper); margin:0 0 1rem; }
+.foot-col ul{ list-style:none; margin:0; padding:0; display:grid; gap:.6rem; }
+.foot-col a{ font-size:.9rem; color:var(--paper-dim); transition:color .15s ease; }
+.foot-col a:hover{ color:var(--paper); }
+.foot-bottom{ display:flex; justify-content:space-between; align-items:flex-end; gap:1.5rem; flex-wrap:wrap; margin-top:2.8rem; padding-top:1.6rem; border-top:1px solid rgba(199,168,88,.2); }
+.foot-disclaimer{ font-size:.82rem; max-width:min(62ch,100%); color:var(--ink-3); }
+.foot-bottom > p:not(.foot-disclaimer){ font-family:var(--mono); font-size:.8rem; color:var(--ink-3); white-space:nowrap; }
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in{ opacity:1; transform:none; }
+.reveal[data-delay="1"]{ transition-delay:.08s; }
+.reveal[data-delay="2"]{ transition-delay:.16s; }
+.reveal[data-delay="3"]{ transition-delay:.24s; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+  html{ scroll-behavior:auto; }
+  .reveal{ opacity:1; transform:none; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .hero-grid{ grid-template-columns:1fr; gap:2.6rem; }
+  .datapage{ max-width:460px; }
+  .steps{ grid-template-columns:repeat(2,1fr); }
+  .countries, .svc-grid, .quotes, .crypto-grid{ grid-template-columns:repeat(2,1fr); }
+  .network{ grid-template-columns:repeat(2,1fr); }
+  .problem-grid{ grid-template-columns:1fr; gap:1.4rem; }
+  .cta-final .wrap{ grid-template-columns:1fr; }
+  .foot-top{ grid-template-columns:1fr 1fr; }
+  .space-card{ grid-template-columns:1fr; }
+  .space-orbit{ display:none; }
+}
+@media (max-width:760px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:grid; }
+  .nav-actions .btn--ink{ display:none; }
+  .nav.is-open .nav-actions{ display:flex; }
+  .nav.is-open .nav-actions .btn--ink{ display:inline-flex; width:100%; justify-content:center; }
+  .nav.is-open{ height:auto; flex-direction:column; align-items:stretch; padding-bottom:1rem; background:var(--paper); }
+  .nav.is-open .wrap{ flex-direction:column; align-items:stretch; gap:.6rem; }
+  .nav.is-open .nav-links{ display:flex; flex-direction:column; gap:.2rem; padding-top:.6rem; border-top:1px solid var(--line); }
+  .nav.is-open .nav-links a{ padding:.55em 0; }
+  .nav.is-open nav{ order:3; }
+  .nav.is-open .nav-actions{ order:2; }
+  .countries, .svc-grid, .quotes, .crypto-grid, .stats, .network{ grid-template-columns:1fr; }
+  .steps{ grid-template-columns:1fr; }
+  .foot-top{ grid-template-columns:1fr; gap:1.6rem; }
+  .foot-bottom{ flex-direction:column; align-items:flex-start; }
+  .hero-cta-row{ gap:.9rem; }
+}
+@media (max-width:420px){
+  .pass-specs .spec{ grid-template-columns:6rem 1fr; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="eMigranteFiscal, inicio">
+      <span class="mark" aria-hidden="true">eF</span>
+      <span>e<span class="m">M</span>igranteFiscal</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="#como">Cómo funciona</a></li>
+        <li><a href="#paises">Países</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#confianza">Confianza</a></li>
+        <li><a href="#cripto">Cripto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn--ink" href="#reservar">Reserva gratis</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Pasaporte a tu libertad · 16 destinos</span>
+        <h1>Vive donde quieras.<span class="line2">Tributa donde tiene sentido.</span></h1>
+        <p class="hero-sub">Mudamos tu residencia fiscal a uno de más de 16 países hechos a tu medida, sin papeleo imposible y sin pisar una sola raya en rojo.</p>
+        <div class="hero-cta-row">
+          <a class="btn btn--primary btn--lg" href="#reservar">Reserva tu revisión gratuita <span class="arrow" aria-hidden="true">→</span></a>
+          <span class="hero-note">15 minutos. Sin coste. Sin compromiso.</span>
+        </div>
+      </div>
+
+      <div class="hero-stamp reveal" data-delay="2">
+        <div class="datapage" aria-label="Documento de viaje ilustrativo">
+          <div class="dp-guilloche" aria-hidden="true"></div>
+
+          <div class="dp-head">
+            <div>
+              <div class="dp-kicker">Documento de viaje</div>
+              <div class="dp-type">Tipo eF · Residencia</div>
+            </div>
+            <div class="dp-seal" aria-hidden="true"><b>16</b></div>
+          </div>
+
+          <div class="dp-portrait">
+            <div class="dp-photo" aria-hidden="true"></div>
+            <dl class="dp-rows">
+              <div class="dp-row"><dt>Titular</dt><dd>Tú, dentro de poco</dd></div>
+              <div class="dp-row"><dt>Destino</dt><dd class="em">A elegir entre 16</dd></div>
+              <div class="dp-row"><dt>Régimen</dt><dd>El que de verdad te encaje</dd></div>
+              <div class="dp-row"><dt>Validez</dt><dd>Legal, revisada caso a caso</dd></div>
+            </dl>
+          </div>
+
+          <div class="dp-mrz" aria-hidden="true">
+            <span>P&lt;ESPVIVE&lt;DONDE&lt;QUIERAS<span class="chev">&lt;&lt;&lt;&lt;</span>TRIBUTA&lt;CON&lt;CABEZA</span>
+            <span>EMIGRANTEFISCAL<span class="chev">&lt;&lt;</span>16DESTINOS<span class="chev">&lt;&lt;</span>LIBRE&lt;Y&lt;LEGAL<span class="chev">&lt;&lt;</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-strip reveal" data-delay="1">
+      <span>+16 países</span><span class="dot" aria-hidden="true"></span>
+      <span>Red de profesionales locales</span><span class="dot" aria-hidden="true"></span>
+      <span>Acompañamiento real, no humo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEMA Y CAMBIO ===================== -->
+<section class="section problem">
+  <div class="wrap">
+    <div class="problem-grid">
+      <div class="reveal">
+        <span class="eyebrow">Por qué estás aquí</span>
+        <h2 style="margin-top:1.2rem;">Trabajas, facturas, cumples. Y cada año una parte de lo tuyo se evapora.</h2>
+      </div>
+      <div class="reveal" data-delay="1">
+        <p>No te pasa solo a ti, y no estás obligado a aguantarlo. <strong>Hay países donde tu esfuerzo pesa más y tu dinero respira</strong>, y existe una forma ordenada y legal de llegar hasta ellos.</p>
+        <p>Eso es lo que hacemos. Cogemos esa idea que llevas meses rumiando y la convertimos en un plan con fechas, nombres y pasos concretos. Nosotros ya hicimos el camino. Ahora lo recorremos contigo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CÓMO FUNCIONA ===================== -->
+<section class="section" id="como">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Cuatro pasos, sin letra pequeña.</h2>
+      <p class="lead">Del primer "a ver si esto es para mí" hasta estar instalado y tranquilo en tu nuevo país. Tú decides el ritmo.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="num">PASO 01</span><h3>Llamada de 15 minutos</h3><p>Nos cuentas cómo ganas tu dinero y cómo quieres vivir. Te decimos sin rodeos si podemos ayudarte. Gratis.</p></div>
+      <div class="step reveal" data-delay="1"><span class="num">PASO 02</span><h3>Estudiamos tu caso</h3><p>Cruzamos tu situación fiscal con tus prioridades: clima, idioma, coste, hijos, ritmo. De ahí salen tus destinos reales, no los del folleto.</p></div>
+      <div class="step reveal" data-delay="2"><span class="num">PASO 03</span><h3>Te conectamos sobre el terreno</h3><p>Contables, abogados, notarios e inmobiliarios locales del país que elijas. Gente de confianza que ya ha hecho esto muchas veces.</p></div>
+      <div class="step reveal" data-delay="3"><span class="num">PASO 04</span><h3>Te acompañamos hasta el final</h3><p>No desaparecemos tras la primera factura. Seguimos contigo durante todo el traslado, hasta que estés instalado y tranquilo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAÍSES ===================== -->
+<section class="section section--tint" id="paises">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">El mapa</span>
+      <h2>Dieciséis formas de empezar de nuevo.</h2>
+      <p class="lead">Cada destino tiene su carácter y su régimen. Compáralos de un vistazo y filtra por lo que de verdad te importa. Las cifras son orientativas: tu plan se afina en la llamada.</p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filtrar países">
+      <button class="chip is-active" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="chip" data-filter="cero" aria-pressed="false">0% o territorial</button>
+      <button class="chip" data-filter="europa" aria-pressed="false">Europa</button>
+      <button class="chip" data-filter="playa" aria-pressed="false">Playa</button>
+      <button class="chip" data-filter="montana" aria-pressed="false">Montaña</button>
+      <button class="chip" data-filter="presupuesto" aria-pressed="false">Presupuesto ajustado</button>
+      <button class="chip" data-filter="espanol" aria-pressed="false">En español</button>
+    </div>
+
+    <div class="countries" id="countryGrid">
+
+      <!-- PORTUGAL -->
+      <article class="pass reveal" data-tags="europa playa">
+        <div class="pass-stub" style="--tint:#e7d8c8">
+          <div class="pass-code"><span>PRT · PT</span><span>UE</span></div>
+          <div class="pass-name">Portugal</div>
+          <div class="pass-coords">38.72° N · 9.13° O</div>
+          <div class="pass-mark">20%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">El antiguo NHR cerró, pero su heredero, el régimen IFICI, sigue premiando a perfiles cualificados con un tipo fijo del 20% sobre la renta profesional.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>IRS general; IFICI al 20% para perfiles cualificados</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Atlántico templado</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Portugués, fácil para hispanohablantes</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>183 días para residencia fiscal</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien quiere Europa y mar sin irse lejos</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-portugal/">Ver Portugal <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- USA -->
+      <article class="pass reveal" data-tags="playa" data-delay="1">
+        <div class="pass-stub" style="--tint:#d9dde3">
+          <div class="pass-code"><span>USA · US</span><span>NA</span></div>
+          <div class="pass-name">Estados Unidos</div>
+          <div class="pass-coords">38.90° N · 77.04° O</div>
+          <div class="pass-mark">LLC</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">No es un paraíso de tipo cero, es infraestructura. Una LLC bien montada y una cuenta física fuera del CRS abren muchas más puertas de las que crees.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Federal progresivo; LLC para no residentes según origen de renta</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Variable, alto en grandes ciudades</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>De todo, según el estado</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Según visado y estructura</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Negocio digital que quiere LLC y banca sólida</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-usa/">Ver USA <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- COSTA RICA -->
+      <article class="pass reveal" data-tags="cero playa espanol presupuesto" data-delay="2">
+        <div class="pass-stub" style="--tint:#d4e0d2">
+          <div class="pass-code"><span>CRI · CR</span><span>CA</span></div>
+          <div class="pass-name">Costa Rica</div>
+          <div class="pass-coords">9.93° N · 84.08° O</div>
+          <div class="pass-mark">Terr.</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Modelo territorial: si tu dinero entra de fuera, Costa Rica no lo toca. Y de fondo, selva, dos océanos y eso de la pura vida que aquí no es eslogan.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Territorial: las rentas del exterior no tributan</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio-bajo</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Tropical, dos estaciones</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Español</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>183 días; vías para rentistas e inversores</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien cobra de fuera y quiere naturaleza</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-costa-rica/">Ver Costa Rica <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- ESPAÑA -->
+      <article class="pass reveal" data-tags="europa playa espanol">
+        <div class="pass-stub" style="--tint:#ecdcc4">
+          <div class="pass-code"><span>ESP · ES</span><span>UE</span></div>
+          <div class="pass-name">España</div>
+          <div class="pass-coords">40.41° N · 3.70° O</div>
+          <div class="pass-mark">24%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Sí, España también juega. La Ley Beckham deja a ciertos recién llegados en un 24% fijo durante seis años. El truco está en encajar bien en el régimen.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Alta en general; impatriados (Beckham) al 24% hasta 600.000 €</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Mediterráneo</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Español</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>183 días</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien llega por trabajo y puede acogerse a Beckham</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-spain/">Ver España <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- PARAGUAY -->
+      <article class="pass reveal" data-tags="cero espanol presupuesto" data-delay="1">
+        <div class="pass-stub" style="--tint:#dbe0cf">
+          <div class="pass-code"><span>PRY · PY</span><span>SA</span></div>
+          <div class="pass-name">Paraguay</div>
+          <div class="pass-coords">25.30° S · 57.64° O</div>
+          <div class="pass-mark">Terr.</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Uno de los caminos más sencillos y baratos hasta una residencia territorial. Lo que ganas fuera se queda, sencillamente, fuera del impuesto.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Territorial; 10% sobre renta local, exterior exento</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Bajo</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Subtropical</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Español y guaraní</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia accesible, pocos mínimos</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Presupuesto ajustado y ganas de simplicidad</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-paraguay/">Ver Paraguay <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- CHIPRE -->
+      <article class="pass reveal" data-tags="europa playa" data-delay="2">
+        <div class="pass-stub" style="--tint:#cfe0de">
+          <div class="pass-code"><span>CYP · CY</span><span>UE</span></div>
+          <div class="pass-name">Chipre</div>
+          <div class="pass-coords">35.13° N · 33.43° E</div>
+          <div class="pass-mark">0%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Su régimen non-dom deja dividendos e intereses al 0% durante diecisiete años. Y con la regla de los 60 días, casi ni hace falta que vivas allí.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Non-dom: 0% en dividendos e intereses durante 17 años</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Mediterráneo, mucho sol</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Griego e inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>60 días bajo ciertas condiciones</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien vive de dividendos dentro de la UE</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-chipre/">Ver Chipre <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- SUIZA -->
+      <article class="pass reveal" data-tags="europa montana">
+        <div class="pass-stub" style="--tint:#d7dde2">
+          <div class="pass-code"><span>CHE · CH</span><span>UE*</span></div>
+          <div class="pass-name">Suiza</div>
+          <div class="pass-coords">46.95° N · 7.45° E</div>
+          <div class="pass-mark">Forfait</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">El forfait fiscal te deja pactar un impuesto a tanto alzado según tu nivel de vida. Caro de entrada, pero previsible como un reloj suizo.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Forfait fiscal para extranjeros sin actividad local</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Muy alto</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Alpino, cuatro estaciones</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Alemán, francés, italiano</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia negociada cantón a cantón</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Patrimonio alto que valora estabilidad</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-switzerland/">Ver Suiza <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- TAILANDIA -->
+      <article class="pass reveal" data-tags="playa presupuesto" data-delay="1">
+        <div class="pass-stub" style="--tint:#cfdedb">
+          <div class="pass-code"><span>THA · TH</span><span>AS</span></div>
+          <div class="pass-name">Tailandia</div>
+          <div class="pass-coords">13.75° N · 100.50° E</div>
+          <div class="pass-mark">DTV</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Las reglas sobre el dinero que metes en el país se endurecieron en 2024, así que aquí mandan el coste de vida y los visados largos (DTV, LTR), no un cero mágico.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Renta 5% a 35%; desde 2024 tributan las rentas exteriores que remitas</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Bajo</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Tropical</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Tailandés, inglés en zonas expat</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Visados DTV y LTR para estancias largas</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Nómada con cabeza fiscal y ganas de estilo de vida</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-thailand/">Ver Tailandia <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- URUGUAY -->
+      <article class="pass reveal" data-tags="cero playa espanol" data-delay="2">
+        <div class="pass-stub" style="--tint:#d6dee4">
+          <div class="pass-code"><span>URY · UY</span><span>SA</span></div>
+          <div class="pass-name">Uruguay</div>
+          <div class="pass-coords">34.90° S · 56.16° O</div>
+          <div class="pass-mark">0% / 7%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Ofrece tax holiday: hasta once años sin tocar tus rentas del exterior, o un 7% fijo después. La Suiza de Sudamérica, y encima en español.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Vacaciones fiscales: hasta 11 años sin tributar exterior, o 7% fijo</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Templado</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Español</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>183 días, o inversión más presencia</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien busca estabilidad sin sobresaltos</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-uruguay/">Ver Uruguay <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- ARGENTINA -->
+      <article class="pass reveal" data-tags="espanol montana presupuesto">
+        <div class="pass-stub" style="--tint:#d8e1e7">
+          <div class="pass-code"><span>ARG · AR</span><span>SA</span></div>
+          <div class="pass-name">Argentina</div>
+          <div class="pass-coords">34.60° S · 58.38° O</div>
+          <div class="pass-mark">USD</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">No es el destino del tipo bajo, es el del poder adquisitivo. Si ingresas en divisa fuerte, tu nivel de vida se dispara. Tributa por renta mundial, así que ojo a la planificación.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Renta mundial progresiva; coste en dólares competitivo</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Bajo en dólares</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Variado, de la Patagonia al norte</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Español</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia accesible</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien cobra en divisa fuerte y quiere vida amplia</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-argentina/">Ver Argentina <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- DUBÁI -->
+      <article class="pass reveal" data-tags="cero playa" data-delay="1">
+        <div class="pass-stub" style="--tint:#ecdfc6">
+          <div class="pass-code"><span>ARE · AE</span><span>ME</span></div>
+          <div class="pass-name">Dubái</div>
+          <div class="pass-coords">25.20° N · 55.27° E</div>
+          <div class="pass-mark">0%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">El clásico. Cero sobre tu renta personal. Las sociedades pagan un 9% a partir de cierto beneficio, pero tu sueldo y tus ganancias personales no tributan.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>0% en IRPF personal; sociedades al 9% sobre el umbral</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Alto</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Desértico, verano extremo</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Árabe e inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia ligada a empresa o propiedad</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Ingresos altos que quieren cero y hub global</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-dubai/">Ver Dubái <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- UK -->
+      <article class="pass reveal" data-tags="europa" data-delay="2">
+        <div class="pass-stub" style="--tint:#d7d9e3">
+          <div class="pass-code"><span>GBR · GB</span><span>EU</span></div>
+          <div class="pass-name">Reino Unido</div>
+          <div class="pass-coords">51.50° N · 0.12° O</div>
+          <div class="pass-mark">FIG</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">El viejo non-dom murió en 2025. Su relevo, el régimen FIG, te regala cuatro años sin tributar lo que ganas fuera, siempre que llegues nuevo.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Régimen FIG: 4 años sin tributar rentas y ganancias del exterior</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Alto; Londres, muy alto</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Atlántico, gris con encanto</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Según test de residencia</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien llega nuevo y quiere cuatro años de gracia</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-uk/">Ver Reino Unido <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- BALI -->
+      <article class="pass reveal" data-tags="playa presupuesto">
+        <div class="pass-stub" style="--tint:#d2e0d6">
+          <div class="pass-code"><span>IDN · ID</span><span>AS</span></div>
+          <div class="pass-name">Bali</div>
+          <div class="pass-coords">8.34° S · 115.09° E</div>
+          <div class="pass-mark">Nómada</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Más estilo de vida que ingeniería fiscal. Visados de nómada que te dejan instalarte barato, con comunidad y olas a la puerta de casa.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Renta progresiva; visados de nómada y second-home</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Bajo</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Tropical</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Indonesio, inglés en zonas expat</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Visados de larga duración y second-home</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Creativo o nómada que quiere comunidad y surf</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-bali/">Ver Bali <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- NUEVA ZELANDA -->
+      <article class="pass reveal" data-tags="montana playa" data-delay="1">
+        <div class="pass-stub" style="--tint:#d3ddd3">
+          <div class="pass-code"><span>NZL · NZ</span><span>OC</span></div>
+          <div class="pass-name">Nueva Zelanda</div>
+          <div class="pass-coords">41.29° S · 174.78° E</div>
+          <div class="pass-mark">4 años</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Cuatro años de exención transitoria para recién llegados, más naturaleza de postal y seguridad. El destino del borrón y cuenta nueva.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Exención transitoria de 4 años sobre casi toda renta del exterior</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Alto</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Templado oceánico</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia por puntos o inversión</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Familia que busca naturaleza, calma y reset</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-nueva-zelanda/">Ver Nueva Zelanda <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- RUSIA -->
+      <article class="pass reveal" data-tags="montana" data-delay="2">
+        <div class="pass-stub" style="--tint:#dcdde0">
+          <div class="pass-code"><span>RUS · RU</span><span>EU</span></div>
+          <div class="pass-name">Rusia</div>
+          <div class="pass-coords">55.75° N · 37.61° E</div>
+          <div class="pass-mark">13%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Un tipo plano del 13% para casi todos los niveles de renta. El reto no es el impuesto, es la logística: trámites, banca y contexto piden guía local sí o sí.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Tipo plano del 13% (15% sobre cierto umbral)</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio-bajo</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Continental, inviernos duros</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Ruso</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Residencia con trámites específicos</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien prioriza tipo plano bajo y no teme papeleo</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-russia/">Ver Rusia <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- MALTA -->
+      <article class="pass reveal" data-tags="europa playa">
+        <div class="pass-stub" style="--tint:#cfdee0">
+          <div class="pass-code"><span>MLT · MT</span><span>UE</span></div>
+          <div class="pass-name">Malta</div>
+          <div class="pass-coords">35.90° N · 14.51° E</div>
+          <div class="pass-mark">15%</div>
+        </div>
+        <div class="pass-body">
+          <p class="pass-hook">Base por remesa al estilo non-dom: solo tributa lo que entras en la isla. UE, inglés y Mediterráneo, con un 15% en sus programas de residencia.</p>
+          <dl class="pass-specs">
+            <div class="spec"><dt>Fiscalidad</dt><dd>Non-dom por remesa; programas de residencia al 15%</dd></div>
+            <div class="spec"><dt>Coste vida</dt><dd>Medio</dd></div>
+            <div class="spec"><dt>Clima</dt><dd>Mediterráneo, sol casi todo el año</dd></div>
+            <div class="spec"><dt>Idioma</dt><dd>Maltés e inglés</dd></div>
+            <div class="spec"><dt>Estancia</dt><dd>Programas de residencia con mínimos</dd></div>
+            <div class="spec"><dt>Encaja a</dt><dd>Quien quiere UE en inglés y un non-dom manejable</dd></div>
+          </dl>
+          <div class="pass-foot"><a class="link-arrow" href="https://emigrantefiscal.com/emigrate-to-malta/">Ver Malta <span aria-hidden="true">→</span></a></div>
+        </div>
+      </article>
+
+    </div>
+
+    <p id="noResults" style="display:none; font-family:var(--mono); color:var(--ink-2); margin-top:1rem;">Ningún país con ese filtro. Prueba otra combinación.</p>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section class="section" id="servicios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Servicios destacados</span>
+      <h2>Lo que más nos piden.</h2>
+      <p class="lead">Trámites concretos, cerrados y sin sorpresas. Cada uno resuelve una pieza del rompecabezas para que tú no tengas que pelearte con la burocracia de otro país.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <span class="tag">Portugal</span>
+        <h3>NIF portugués online</h3>
+        <p>Tu número fiscal portugués sin pisar Lisboa, tramitado entero en remoto. La llave que abre cuentas, contratos y residencia.</p>
+        <a class="link-arrow" href="https://emigrantefiscal.com/consigue-tu-nif-portugues-online/">Obtener mi NIF <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc reveal" data-delay="1">
+        <span class="tag">Estados Unidos</span>
+        <h3>Banca física fuera del CRS</h3>
+        <p>Una cuenta real en suelo estadounidense, fuera del intercambio automático de información. Tu dinero, donde tú decides.</p>
+        <a class="link-arrow" href="https://emigrantefiscal.com/banco-fisico-usa/">Abrir cuenta en USA <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc reveal" data-delay="2">
+        <span class="tag">Estados Unidos</span>
+        <h3>Gestión de LLC en USA</h3>
+        <p>Montamos y mantenemos tu LLC para que opere desde el día uno. Estructura, formación y cumplimiento, resueltos.</p>
+        <a class="link-arrow" href="https://emigrantefiscal.com/gestiones-de-llc-en-usa/">Crear mi LLC <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc reveal">
+        <span class="tag">Estados Unidos</span>
+        <h3>Dirección residencial en USA</h3>
+        <p>Una dirección real para ti o tu empresa, base sólida para tu residencia fiscal y tu correspondencia oficial.</p>
+        <a class="link-arrow" href="https://emigrantefiscal.com/direccion-residencial-usa-particulares-empresas-residencia-fiscal/">Conseguir dirección <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc reveal" data-delay="1">
+        <span class="tag">Costa Rica</span>
+        <h3>ECO PACK Costa Rica</h3>
+        <p>Tu residencia fiscal costarricense en un paquete cerrado, con todo medido de principio a fin. Sin letra pequeña.</p>
+        <a class="link-arrow" href="https://emigrantefiscal.com/eco-pack-costa-rica/">Ver el ECO PACK <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="svc reveal" data-delay="2" style="display:flex; align-items:center; justify-content:center; background:var(--ink); border-color:var(--ink);">
+        <div style="text-align:center;">
+          <p style="color:#D8CFBF; margin-bottom:1.1rem; font-size:.95rem;">¿No ves tu caso? Hablamos sin compromiso y te decimos qué encaja.</p>
+          <a class="btn btn--primary" href="#reservar">Cuéntanos tu caso <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONFIANZA ===================== -->
+<section class="section section--tint" id="confianza">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Confianza</span>
+      <h2>Gente real, no promesas.</h2>
+      <p class="lead">Sabemos que has visto muchos gurús y alguna que otra estafa. Por eso aquí ponemos nombres, caras y números, y dejamos que tú juzgues.</p>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="big">+16</div><div class="lbl">Países en regla</div></div>
+      <div class="stat"><div class="big"><span class="ph">[X]</span></div><div class="lbl">Personas acompañadas</div></div>
+      <div class="stat"><div class="big"><span class="ph">[Y]</span></div><div class="lbl">Años haciendo esto</div></div>
+    </div>
+
+    <h3 class="subhead reveal">Lo que cuentan quienes ya cruzaron</h3>
+    <div class="quotes">
+      <article class="quote reveal">
+        <span class="qmark" aria-hidden="true">&ldquo;</span>
+        <p>[TESTIMONIO. Pega aquí el comentario real del cliente, en sus palabras. Dos o tres frases bastan.]</p>
+        <div class="who"><b>[NOMBRE]</b> <span>· [destino], desde [origen]</span></div>
+      </article>
+      <article class="quote reveal" data-delay="1">
+        <span class="qmark" aria-hidden="true">&ldquo;</span>
+        <p>[TESTIMONIO. Mejor si menciona un miedo que tenía antes y cómo se resolvió.]</p>
+        <div class="who"><b>[NOMBRE]</b> <span>· [destino], desde [origen]</span></div>
+      </article>
+      <article class="quote reveal" data-delay="2">
+        <span class="qmark" aria-hidden="true">&ldquo;</span>
+        <p>[TESTIMONIO. Un resultado concreto vende más que mil adjetivos.]</p>
+        <div class="who"><b>[NOMBRE]</b> <span>· [destino], desde [origen]</span></div>
+      </article>
+    </div>
+
+    <h3 class="subhead reveal">La red, país por país</h3>
+    <div class="network">
+      <article class="pro reveal"><div class="ava" aria-hidden="true">PT</div><div class="meta"><b>[NOMBRE]</b><span>Estratega fiscal</span><span class="co">Portugal</span></div></article>
+      <article class="pro reveal" data-delay="1"><div class="ava" aria-hidden="true">US</div><div class="meta"><b>[NOMBRE]</b><span>Contable</span><span class="co">Miami, USA</span></div></article>
+      <article class="pro reveal" data-delay="2"><div class="ava" aria-hidden="true">CR</div><div class="meta"><b>[NOMBRE]</b><span>Abogada</span><span class="co">Costa Rica</span></div></article>
+      <article class="pro reveal"><div class="ava" aria-hidden="true">PY</div><div class="meta"><b>[NOMBRE]</b><span>Notario</span><span class="co">Paraguay</span></div></article>
+      <article class="pro reveal" data-delay="1"><div class="ava" aria-hidden="true">AE</div><div class="meta"><b>[NOMBRE]</b><span>Gestora de residencia</span><span class="co">Dubái</span></div></article>
+      <article class="pro reveal" data-delay="2"><div class="ava" aria-hidden="true">CY</div><div class="meta"><b>[NOMBRE]</b><span>Traductora jurada</span><span class="co">Chipre</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CRIPTO ===================== -->
+<section class="section crypto" id="cripto">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:none;">
+      <span class="eyebrow">Mundo cripto</span>
+      <h2>El último reducto de libertad para tu dinero.</h2>
+      <p class="lead">Si te gusta moverte, a tu dinero más. Tengas o no inversiones, la cripto se ha convertido en la vía más lógica para que tu patrimonio no dependa del permiso de nadie. Aquí van las puertas de entrada que recomendamos.</p>
+    </div>
+    <div class="crypto-grid">
+      <a class="cry reveal" href="https://emigrantefiscal.com/neobancos/">
+        <span class="ix">01 · Cuentas</span>
+        <h3>Neobancos y fintechs</h3>
+        <p>Banca digital sin fronteras para mover, guardar y gastar tu dinero allí donde estés.</p>
+        <span class="go">Ver listado <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="cry reveal" data-delay="1" href="https://emigrantefiscal.com/tarjetas/">
+        <span class="ix">02 · Gasto</span>
+        <h3>Tarjetas cripto-friendly</h3>
+        <p>Paga el café con tus criptos. Tarjetas que convierten en el momento, sin dramas.</p>
+        <span class="go">Ver listado <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="cry reveal" data-delay="2" href="https://emigrantefiscal.com/exchanges/">
+        <span class="ix">03 · Mercado</span>
+        <h3>Exchanges</h3>
+        <p>Dónde comprar, vender y custodiar. Plataformas con las que dar el primer paso sin sustos.</p>
+        <span class="go">Ver listado <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL + FORM ===================== -->
+<section class="section cta-final" id="reservar">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Empecemos</span>
+      <h2 style="margin-top:1.2rem;">Quince minutos pueden cambiar dónde vives el año que viene.</h2>
+      <p class="lead">La primera llamada es gratis y sin compromiso. Te escuchamos, miramos tu caso y, si no podemos ayudarte, te lo decimos a la cara. Sin venderte humo.</p>
+      <ul class="cta-points">
+        <li><span class="ck" aria-hidden="true">✓</span> Revisión gratuita de tu situación fiscal y de vida.</li>
+        <li><span class="ck" aria-hidden="true">✓</span> Destinos reales que encajan contigo, no con el folleto.</li>
+        <li><span class="ck" aria-hidden="true">✓</span> Cero compromiso y cero presión para contratar.</li>
+        <li><span class="ck" aria-hidden="true">✓</span> Profesionales locales de verdad detrás de cada paso.</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal" data-delay="1">
+      <form id="bookingForm" novalidate>
+        <div class="field">
+          <label for="f-name">Nombre</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Cómo te llamas">
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required placeholder="tu@correo.com">
+        </div>
+        <div class="field">
+          <label for="f-phone">Móvil</label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel" required placeholder="Con prefijo, p. ej. +34 600 000 000">
+        </div>
+        <div class="field">
+          <label for="f-country">País de residencia fiscal actual</label>
+          <select id="f-country" name="country" required>
+            <option value="" selected disabled>Elige tu país</option>
+            <option>España</option>
+            <option>México</option>
+            <option>Argentina</option>
+            <option>Colombia</option>
+            <option>Chile</option>
+            <option>Perú</option>
+            <option>Uruguay</option>
+            <option>Paraguay</option>
+            <option>Venezuela</option>
+            <option>Ecuador</option>
+            <option>Estados Unidos</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Comentarios <span class="opt">(opcional)</span></label>
+          <textarea id="f-msg" name="message" placeholder="Cuéntanos algo de tu caso si te apetece. Si no, lo vemos en la llamada."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg">Reserva tu revisión gratuita <span class="arrow" aria-hidden="true">→</span></button>
+        <p class="form-foot">Tus datos solo se usan para contactarte sobre tu revisión. Nada de spam.</p>
+      </form>
+
+      <div class="form-ok" id="formOk" role="status" aria-live="polite">
+        <div class="tick" aria-hidden="true">✓</div>
+        <h3>Recibido.</h3>
+        <p>Te escribimos en menos de 24 horas para cuadrar tu llamada de 15 minutos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LUNA / MARTE (huevo de pascua) ===================== -->
+<section class="section space-egg">
+  <div class="wrap">
+    <div class="space-card reveal">
+      <div>
+        <span class="eyebrow">Zona restringida · órbita baja</span>
+        <h2>¿Y cuando la Tierra se quede pequeña?</h2>
+        <p>Tenemos echado el ojo a las condiciones fiscales de la Luna y de Marte. La gravedad es opcional, el papeleo todavía no. De momento es una broma. De momento.</p>
+        <p style="margin-top:1.2rem;"><a class="link-arrow" href="https://emigrantefiscal.com/espacio/">Asómate al espacio <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="space-orbit" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="brand-block">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">eF</span><span>e<span class="m">M</span>igranteFiscal</span></a>
+        <p class="foot-tag">Acompañamiento real en tu emigración fiscal. Tu dinero y tu vida no deberían necesitar el permiso de nadie.</p>
+        <a class="foot-mail" href="mailto:SOS@eMigranteFiscal.com">SOS@eMigranteFiscal.com</a>
+      </div>
+      <div class="foot-col">
+        <h4>Destinos</h4>
+        <ul>
+          <li><a href="https://emigrantefiscal.com/emigrate-portugal/">Portugal</a></li>
+          <li><a href="https://emigrantefiscal.com/emigrate-usa/">Estados Unidos</a></li>
+          <li><a href="https://emigrantefiscal.com/emigrate-to-dubai/">Dubái</a></li>
+          <li><a href="https://emigrantefiscal.com/emigrate-paraguay/">Paraguay</a></li>
+          <li><a href="#paises">Ver los 16</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="https://emigrantefiscal.com/consigue-tu-nif-portugues-online/">NIF portugués online</a></li>
+          <li><a href="https://emigrantefiscal.com/banco-fisico-usa/">Banca física en USA</a></li>
+          <li><a href="https://emigrantefiscal.com/gestiones-de-llc-en-usa/">LLC en USA</a></li>
+          <li><a href="https://emigrantefiscal.com/direccion-residencial-usa-particulares-empresas-residencia-fiscal/">Dirección en USA</a></li>
+          <li><a href="https://emigrantefiscal.com/eco-pack-costa-rica/">ECO PACK Costa Rica</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Cripto</h4>
+        <ul>
+          <li><a href="https://emigrantefiscal.com/neobancos/">Neobancos y fintechs</a></li>
+          <li><a href="https://emigrantefiscal.com/tarjetas/">Tarjetas cripto-friendly</a></li>
+          <li><a href="https://emigrantefiscal.com/exchanges/">Exchanges</a></li>
+          <li><a href="https://emigrantefiscal.com/espacio/">Luna y Marte</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-disclaimer">No somos asesores fiscales. Somos acompañantes: coordinamos a los profesionales locales que sí lo son (contables, abogados, notarios, inmobiliarios y traductores) en más de 16 países.</p>
+      <p>© <span id="year"></span> eMigranteFiscal</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Año del pie */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* Nav: hairline al hacer scroll */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if (window.scrollY > 8) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  /* Nav: menú móvil */
+  var toggle = document.getElementById('navToggle');
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  /* cerrar el menú al pulsar un enlace */
+  nav.querySelectorAll('.nav-links a, .nav-actions a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* Revelado al hacer scroll */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:0.12 });
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Filtro de países */
+  var chips = document.querySelectorAll('.chip');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#countryGrid .pass'));
+  var noRes = document.getElementById('noResults');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('is-active'); c.setAttribute('aria-pressed','false'); });
+      chip.classList.add('is-active'); chip.setAttribute('aria-pressed','true');
+      var f = chip.getAttribute('data-filter');
+      var shown = 0;
+      cards.forEach(function(card){
+        var tags = card.getAttribute('data-tags') || '';
+        var match = (f === 'all') || tags.split(' ').indexOf(f) !== -1;
+        card.classList.toggle('is-hidden', !match);
+        if (match) shown++;
+      });
+      noRes.style.display = shown === 0 ? 'block' : 'none';
+    });
+  });
+
+  /* Formulario: validación ligera + confirmación */
+  var form = document.getElementById('bookingForm');
+  var ok = document.getElementById('formOk');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    /* validación nativa */
+    if (!form.checkValidity()){
+      var firstInvalid = form.querySelector(':invalid');
+      if (firstInvalid) firstInvalid.focus();
+      form.reportValidity();
+      return;
+    }
+    /* AQUÍ conectas tu backend / Calendly / email.
+       Por ahora mostramos confirmación en pantalla. */
+    form.style.display = 'none';
+    ok.classList.add('show');
+    ok.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block:'center' });
+  });
+
+})();
+</script>
+</body>
+</html>
